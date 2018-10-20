@@ -1,6 +1,8 @@
 from sqlalchemy import sql, orm
 from app import db
 
+#hi
+
 class Drinker(db.Model):
     __tablename__ = 'drinker'
     name = db.Column('name', db.String(20), primary_key=True)
