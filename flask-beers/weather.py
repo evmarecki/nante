@@ -49,7 +49,17 @@ humidity = json_data["main"]["humidity"]
 print("humidity")
 print(humidity)
 
-cur.execute(postgres, (INSERT, {city, description, tempC, tempF, humidity}))
+insertSql = INSERT INTO WEATHER VALUES (city, description, tempC, tempF, humidity);
+updateSql = UPDATE WEATHER SET weather.city = city and weather.description = description and weather.tempC = tempC and weather.tempF = tempF and weather.humidity = humidity where city = city
+IF NOT EXISTS(SELECT weather.city from WEATHER where weather.city = city) THEN
+cur.execute(insertSql, (city, description, tempC, tempF, humidity))
+END IF;
+
+IF NOT EXISTS(SELECT weather.city from WEATHER where weather.city = city) THEN
+cur.execute(updateSql, (city, description, tempC, tempF, humidity))
+END IF;
 
 conn.commit()
 cursor.close()
+
+# if location already exists and we want to update the data, do update 
