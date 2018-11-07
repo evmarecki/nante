@@ -29,28 +29,16 @@ url = api_address + city
 
 json_data = requests.get(url).json()
 
-print(json_data)
-print("-----")
-
-print(city)
-
 #TO DO: output current time, date
 
 description = json_data["weather"][0]["main"]
 
-print(description)
 
 temperature = json_data["main"]["temp"]
-print("temperature in celc")
 tempC = kelvinToCelcius(temperature)
-print(tempC)
-print("temperature in fahr")
 tempF = kelvinToFahrenheit(temperature)
-print(tempF)
 
 humidity = json_data["main"]["humidity"]
-print("humidity")
-print(humidity)
 
 cursor.execute("TRUNCATE WEATHER")
 
