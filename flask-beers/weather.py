@@ -6,14 +6,17 @@
 import requests
 import psycopg2 as pg2
 
-conn = psycopg2.connect(host="35.229.38.35",database="test", user="postgres", password="postgres")
+
+#host : http://0.0.0.0:5000/
+#	35.229.38.35
+connect = pg2.connect(host="127.0.0.1",database="postgres", user="postgres", password="postgres")
 cursor = connect.cursor()
 
 def kelvinToCelcius(num):
-	return num - 273.15
+	return int(num - 273.15)
 
 def kelvinToFahrenheit(num):
-	return kelvinToCelcius(num) * (float(9)/5) + 32
+	return int(kelvinToCelcius(num) * (float(9)/5) + 32)
 
 
 # api_address = 'api.openweathermap.org/data/2.5/weather?appid=450f081fa3b3d9ed257e4d6dc26f05f0&q='
@@ -31,7 +34,7 @@ print("-----")
 
 print(city)
 
-#current time, date
+#TO DO: output current time, date
 
 description = json_data["weather"][0]["main"]
 
@@ -49,17 +52,12 @@ humidity = json_data["main"]["humidity"]
 print("humidity")
 print(humidity)
 
-insertSql = INSERT INTO WEATHER VALUES (city, description, tempC, tempF, humidity);
-updateSql = UPDATE WEATHER SET weather.city = city and weather.description = description and weather.tempC = tempC and weather.tempF = tempF and weather.humidity = humidity where city = city
-IF NOT EXISTS(SELECT weather.city from WEATHER where weather.city = city) THEN
-cur.execute(insertSql, (city, description, tempC, tempF, humidity))
-END IF;
+cursor.execute("TRUNCATE WEATHER")
 
-IF NOT EXISTS(SELECT weather.city from WEATHER where weather.city = city) THEN
-cur.execute(updateSql, (city, description, tempC, tempF, humidity))
-END IF;
+cursor.execute("INSERT INTO WEATHER VALUES (%s, %s, %s, %s, %s)", (city, description, tempC, tempF, humidity))
 
-conn.commit()
+connect.commit()
 cursor.close()
+connect.close()
 
 # if location already exists and we want to update the data, do update 
