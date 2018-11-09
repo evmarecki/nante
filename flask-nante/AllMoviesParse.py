@@ -11,9 +11,9 @@ import psycopg2
 
 def getHTML():
 ##make list of all urls
-    urls=["https://silverbirdcinemas.com/cinema/accra/","https://silverbirdcinemas.com/cinema/westhills/","https://silverbirdcinemas.com/cinema/uyo/", "https://silverbirdcinemas.com/cinema/sec-abuja/","https://silverbirdcinemas.com/cinema/jabi/","https://silverbirdcinemas.com/cinema/galleria/","https://silverbirdcinemas.com/cinema/ikeja/"]
+    urls=["https://silverbirdcinemas.com/cinema/accra/","https://silverbirdcinemas.com/cinema/uyo/", "https://silverbirdcinemas.com/cinema/sec-abuja/","https://silverbirdcinemas.com/cinema/galleria/","https://silverbirdcinemas.com/cinema/ikeja/"]
     cities=["Accra", "Uyo", "Abuja","Victoria Island","Ikeja"]
-    theaters=["Accra Mall","Silverbird Entertainment Centre","Jabi Lake Mall","Silverbird Cinemas","Ikeja City Mall"]
+    theaters=["Accra Mall","Ibom Tropicana Entertainment Centre","Silverbird Entertainment Centre","Silverbird Cinemas, Galleria","Ikeja City Mall"]
     count=1
 ##clear old data
     conn = psycopg2.connect(host="127.0.0.1",database="postgres", user="postgres", password="postgres")
