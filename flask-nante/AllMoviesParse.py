@@ -24,7 +24,7 @@ def getHTML():
     conn.commit()
     cur.close()
     conn.close()
-    for j in range(0, len(urls)-1):
+    for j in range(0, len(urls)):
         url=urls[j]
         city=cities[j]
         theater=theaters[j]
