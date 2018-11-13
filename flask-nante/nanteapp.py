@@ -12,13 +12,13 @@ db = SQLAlchemy(app, session_options={'autocommit': False})
 def main():
     return render_template('homepage.html')
 
-@app.route('/<city>')
-def Accra():
+@app.route('/city/<city>')
+def City(city):
     CityWeather = db.session.query(modelsNew.Weather)\
         .filter(modelsNew.Weather.city == city).one()
     CityMovies = db.session.query(modelsNew.Movies)\
         .filter(modelsNew.Location.city == city).one()
-    return render_template('<city>.html', Movies=CitMovies, Weather= CityWeather)
+    return render_template('city.html', Movies=CityMovies, Weather= CityWeather)
 
 
 if __name__ == '__main__':
