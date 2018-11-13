@@ -17,7 +17,7 @@ def City(city):
     CityWeather = db.session.query(modelsNew.Weather)\
         .filter(modelsNew.Weather.city == city).one()
     CityMovies = db.session.query(modelsNew.Movies)\
-        .filter(modelsNew.Location.city == city).one()
+        .filter(modelsNew.Location.city == city).one() #TODO: fix, want multiple movies, then fix template
     return render_template('city.html', Movies=CityMovies, Weather= CityWeather)
 
 
