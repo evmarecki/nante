@@ -3,12 +3,10 @@
 {% for movie in movies %} 
 {{movie.title}}: {{movie.time_and_day}}
 {% endfor %}
-
-{% for data in weather %} 
-Temperature (Celsius): {{data.tempc}}
-Temperature (Fahrenheit): {{data.tempf}}
-Description: {{data.summary}}
-Humidity: {{data.humidity}}
-{% endfor %}
+ 
+Temperature (Celsius): {{weather.tempc}}
+Temperature (Fahrenheit): {{weather.tempf}}
+Description: {{weather.summary}}
+Humidity: {{weather.humidity}}
 
 {% endblock %}

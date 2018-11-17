@@ -15,7 +15,7 @@ def main():
 @app.route('/city/<city>')
 def City(city):
     CityMovies = db.session.query(modelsNew.Movies)\
-        .filter(modelsNew.Location.city == city).all()
+        .filter(modelsNew.Movies.city == city).all()
     CityWeather = db.session.query(modelsNew.Weather)\
         .filter(modelsNew.Weather.city == city).all()
     return render_template('city.html', movies=CityMovies, weather=CityWeather)

@@ -25,6 +25,6 @@ class Weather(db.Model):
                         db.ForeignKey('Location.city'),
                         primary_key=True)
     summary = db.Column('summary', db.String(256))
-    tempC = db.Column('tempc', db.String(256)) 
-    tempF = db.Column('tempf', db.String(256))
+    tempc = db.Column('tempc', db.String(256)) 
+    tempf = db.Column('tempf', db.String(256))
     humidity = db.Column('humidity', db.String(256))
