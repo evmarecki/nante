@@ -1,12 +1,12 @@
 {% extends 'homepage.html' %} {% block heading %}{{city}}{% endblock %} {% block content %} 
 
-{% for movies in Movies %} 
-{{movies.title}}: {{movie.time_and_day}}
+{% for movie in movies %} 
+{{movie.title}}: {{movie.time_and_day}}
 {% endfor %}
 
-{% for data in Weather %} 
-Temperature (Celsius): {{data.tempC}}
-Temperature (Fahrenheit): {{data.tempF}}
+{% for data in weather %} 
+Temperature (Celsius): {{data.tempc}}
+Temperature (Fahrenheit): {{data.tempf}}
 Description: {{data.summary}}
 Humidity: {{data.humidity}}
 
