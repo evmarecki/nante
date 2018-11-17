@@ -1,4 +1,4 @@
-{% extends 'layout.html' %} {% block heading %}{{city}}{% endblock %} {% block content %} 
+{% extends 'homepage.html' %} {% block heading %}{{city}}{% endblock %} {% block content %} 
 
 {% for movie in movies %} 
 {{movie.title}}: {{movie.time_and_day}}
@@ -9,6 +9,7 @@ Temperature (Celsius): {{data.tempc}}
 Temperature (Fahrenheit): {{data.tempf}}
 Description: {{data.summary}}
 Humidity: {{data.humidity}}
+
 {% endfor %}
 
-{% endblock %}
+{% endblock %} 
