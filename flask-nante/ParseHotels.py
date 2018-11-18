@@ -67,6 +67,8 @@ def getHTML():
             
             if count1<7:
                 rating.append(dummy[:3])
+        if city=="Uyo":
+            price=["NULL", "NULL", "NULL", "NULL", "NULL", "NULL"]
         
         ##name
         count1=0;
