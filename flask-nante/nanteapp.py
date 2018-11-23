@@ -14,11 +14,13 @@ def main():
 
 @app.route('/city/<city>')
 def City(city):
-    CityWeather = db.session.query(modelsNew.Weather)\
-        .filter(modelsNew.Weather.city == city).one()
     CityMovies = db.session.query(modelsNew.Movies)\
-        .filter(modelsNew.Location.city == city).one()
-    return render_template('city.html', Movies=CityMovies, Weather= CityWeather)
+        .filter(modelsNew.Movies.city == city).all()
+    CityWeather = db.session.query(modelsNew.Weather)\
+        .filter(modelsNew.Weather.city == city).all()
+    CityHotels = db.session.query(modelsNew.Hotel)\
+        .filter(modelsNew.Hotel.city == city).all()
+    return render_template('city.html', movies=CityMovies, weather=CityWeather, hotel = CityHotels)
 
 
 if __name__ == '__main__':
