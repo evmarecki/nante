@@ -28,3 +28,13 @@ class Weather(db.Model):
     tempc = db.Column('tempc', db.String(256)) 
     tempf = db.Column('tempf', db.String(256))
     humidity = db.Column('humidity', db.String(256))
+
+class Hotel(db.Model):
+    __tablename__ = 'hotel'
+    city = db.Column('city', db.String(256),
+                        db.ForeignKey('Location.city'),
+                        primary_key=True)
+    name = db.Column('name', db.String(256), primary_key = True)
+    rating = db.Column('rating', db.String(256)) 
+    price = db.Column('price', db.String(256))
+    description = db.Column('description', db.String(256))
