@@ -1,3 +1,9 @@
+
+# coding: utf-8
+
+# In[13]:
+
+
 # coding: utf-8
 
 # In[33]:
@@ -49,7 +55,11 @@ def getHTML():
 
 ##movie length
         for m in htmlParsed.findAll("div", { "class" : "entry-date" }):
-            MovieLengths.append(m.get_text())
+            string=m.get_text()
+            hours=int(string[:2]) * 60
+            minutes=int(string[9:11])
+            total=hours+minutes
+            MovieLengths.append(total)
     
 ##movie times
         for m in htmlParsed.findAll("p", { "class" : "cinema_page_showtime" }):
@@ -61,15 +71,15 @@ def getHTML():
     
 ##rating
         for m in htmlParsed.findAll("span", { "class" : "rate" }):
-            MovieRatings.append(m.get_text())
-        
+            MovieRatings.append(float(m.get_text()))
+
      ##connect to db
         conn = psycopg2.connect(host="127.0.0.1",database="postgres", user="postgres", password="postgres")
         cur = conn.cursor() #http://www.postgresqltutorial.com/postgresql-python/delete/
 
         ##loop through values, add to table
         for i in range(0, len(MovieTitles)-1):
-            s= "INSERT INTO Movies VALUES (%s, %s, %s, %s, %s, %s, %s)"
+            s= "INSERT INTO Movies VALUES (%s, %s, %s, %s, %i, %f, %s)"
             cur.execute(s, (city, theater, MovieTitles[i], MovieTimes[i], MovieLengths[i], MovieRatings[i], MovieGenres[i]))
 
         ##loose ends
@@ -77,3 +87,10 @@ def getHTML():
         cur.close()
         conn.close()
 getHTML()
+
+
+# In[5]:
+
+
+getHTML()
+
