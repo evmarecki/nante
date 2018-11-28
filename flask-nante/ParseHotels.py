@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[52]:
+# In[6]:
 
 
 from bs4 import BeautifulSoup
@@ -33,6 +33,7 @@ def getHTML():
             html=webResponse.content
         htmlParsed = BeautifulSoup(html, 'html.parser')
     
+    
         ##declare lists
         description=list()
         price=list()
@@ -54,9 +55,9 @@ def getHTML():
             count1+=1
             dummy=m.get_text().strip()
             if count1<7:
-                price.append(dummy[18:])
+                price.append(float(dummy[19:]))
         if city=="Uyo":
-            price=["NULL", "NULL", "NULL", "NULL", "NULL", "NULL"]
+            price=[-1, -1, -1, -1, -1, -1]
         
         
         ##rating
@@ -66,9 +67,9 @@ def getHTML():
             dummy=m.get_text().strip()
             
             if count1<7:
-                rating.append(dummy[:3])
+                rating.append(float(dummy[:3]))
         if city=="Uyo":
-            price=["NULL", "NULL", "NULL", "NULL", "NULL", "NULL"]
+            rating=[-1, -1, -1, -1, -1, -1]
         
         ##name
         count1=0;
@@ -84,9 +85,9 @@ def getHTML():
 
         ##loop through values, add to table
         for i in range(0, len(name)):
-            s= "INSERT INTO Hotel VALUES (%s, %s, %s, %s, %s)"
+            s= "INSERT INTO Hotel VALUES (%s, %s, %f, %f, %s)"
             cur.execute(s, (city, name[i], rating[i], price[i], description[i]))
-
+     
         ##loose ends
         conn.commit()
         cur.close()
