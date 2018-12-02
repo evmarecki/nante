@@ -22,4 +22,12 @@ Rating: {{hotel.rating}} <br/>
 </p>
 {% endfor %}
 
+{% for restaurant in restaurant %} 
+<p>
+{{restaurant.name}}: {{restaurant.isopen}} <br/>
+Address: {{restaurant.address}} <br/>
+Rating: {{restaurant.rating}} <br/>
+</p>
+{% endfor %}
+
 {% endblock %}
