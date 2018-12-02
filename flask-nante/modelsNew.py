@@ -1,4 +1,4 @@
-from sqlalchemy import sql, orm
+from sqlalchemy import sql, orm, Float, Integer, String, Numeric
 from nanteapp import db
 
 class Location(db.Model):
@@ -15,7 +15,7 @@ class Movies(db.Model):
     title = db.Column('title', db.String(256),primary_key=True)
     time_and_day = db.Column('time_and_day', db.String(256),primary_key=True)
     length = db.Column('length', db.Integer)
-    rating = db.Column('rating', db.Float)
+    rating = db.Column('rating', db.Numeric(10,2))
     genre = db.Column('genre', db.String(256))
     
 
@@ -35,6 +35,6 @@ class Hotel(db.Model):
                         db.ForeignKey('Location.city'),
                         primary_key=True)
     name = db.Column('name', db.String(256), primary_key = True)
-    rating = db.Column('rating', db.Float) 
-    price = db.Column('price', db.Float)
+    rating = db.Column('rating', db.Numeric(10,2)) 
+    price = db.Column('price', db.Numeric(10,2))
     description = db.Column('description', db.String(256))
