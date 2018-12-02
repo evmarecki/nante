@@ -85,7 +85,7 @@ def getHTML():
 
         ##loop through values, add to table
         for i in range(0, len(name)):
-            s= "INSERT INTO Hotel VALUES (%s, %s, %f, %f, %s)"
+            s= "INSERT INTO Hotel VALUES (%s, %s, %s, %s, %s)"
             cur.execute(s, (city, name[i], rating[i], price[i], description[i]))
      
         ##loose ends
