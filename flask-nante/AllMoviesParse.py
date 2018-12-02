@@ -67,7 +67,10 @@ def getHTML():
     
 ##genre
         for m in htmlParsed.findAll("div", { "class" : "note" }):
-            MovieGenres.append(m.get_text())
+            genres=m.get_text()
+            updated=genres.split(':', 1)[-1]
+            updatedTwo=updated.split(',',1)[0]
+            MovieGenres.append(updatedTwo)
     
 ##rating
         for m in htmlParsed.findAll("span", { "class" : "rate" }):
