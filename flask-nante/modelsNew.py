@@ -37,4 +37,4 @@ class Hotel(db.Model):
     name = db.Column('name', db.String(256), primary_key = True)
     rating = db.Column('rating', db.Numeric(10,2)) 
     price = db.Column('price', db.Numeric(10,2))
-    description = db.Column('description', db.String(256))
+   
