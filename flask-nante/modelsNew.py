@@ -14,8 +14,8 @@ class Movies(db.Model):
     theater_name = db.Column('theater_name', db.String(256), primary_key=True)
     title = db.Column('title', db.String(256),primary_key=True)
     time_and_day = db.Column('time_and_day', db.String(256),primary_key=True)
-    length = db.Column('length', db.String(256))
-    rating = db.Column('rating', db.String(256))
+    length = db.Column('length', db.Integer)
+    rating = db.Column('rating', db.Float)
     genre = db.Column('genre', db.String(256))
     
 
@@ -35,6 +35,6 @@ class Hotel(db.Model):
                         db.ForeignKey('Location.city'),
                         primary_key=True)
     name = db.Column('name', db.String(256), primary_key = True)
-    rating = db.Column('rating', db.String(256)) 
-    price = db.Column('price', db.String(256))
+    rating = db.Column('rating', db.Float) 
+    price = db.Column('price', db.Float)
     description = db.Column('description', db.String(256))
