@@ -2,7 +2,7 @@
 
 {% for movie in movies %} 
 {{movie.title}}: {{movie.time_and_day}} showing at {{movie.theater_name}}
-Duration: {{movie.length}}
+Duration: {{movie.length}} minutes
 Rating: {{movie.rating}}
 Genre: {{movie.genre}}
 {% endfor %}
@@ -14,8 +14,8 @@ Humidity: {{weather.humidity}}
 
 {% for hotel in hotels %} 
 {{hotel.name}}: {{hotel.description}}
-Price: {{hotel.price}}
-Rating: {{hotel.rating}}
+Price: ${{hotel.price}} 
+Rating: {{hotel.rating}} 
 {% endfor %}
 
 {% endblock %}
