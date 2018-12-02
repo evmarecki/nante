@@ -37,4 +37,14 @@ class Hotel(db.Model):
     name = db.Column('name', db.String(256), primary_key = True)
     rating = db.Column('rating', db.Numeric(10,2)) 
     price = db.Column('price', db.Numeric(10,2))
+    
+class Restaurant(db.Model):
+    __tablename__ = 'restaurant'
+    city = db.Column('city', db.String(256),
+                        db.ForeignKey('Location.city'),
+                        primary_key=True)
+    name = db.Column('name', db.String(256), primary_key = True)
+    address = db.Column('address', db.String(256), primary_key = True)
+    rating = db.Column('rating', db.Numeric(10,2)) 
+    isopen = db.Column('isopen', db.Boolean)
    
