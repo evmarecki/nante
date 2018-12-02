@@ -2,13 +2,13 @@
 
 {% for movie in movies %} 
 <p>
- {{movie.title}}: {{movie.time_and_day}} showing at {{movie.theater_name}}<br/>
+{{movie.title}}: {{movie.time_and_day}} showing at {{movie.theater_name}}<br/>
 Duration: {{movie.length}} minutes <br/>
 Rating: {{movie.rating}}<br/>
 Genre: {{movie.genre}}<br/>
 </p>
 {% endfor %}
- 
+
 Temperature (Celsius): {{weather.tempc}}
 Temperature (Fahrenheit): {{weather.tempf}}
 Description: {{weather.summary}}
