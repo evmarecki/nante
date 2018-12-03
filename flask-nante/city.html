@@ -1,0 +1,25 @@
+{% extends 'layout.html' %} {% block heading %}{{city}}{% endblock %} {% block content %} 
+
+{% for movie in movies %} 
+<p>
+{{movie.title}}: {{movie.time_and_day}} showing at {{movie.theater_name}}<br/>
+Duration: {{movie.length}} minutes <br/>
+Rating: {{movie.rating}}<br/>
+Genre: {{movie.genre}}<br/>
+</p>
+{% endfor %}
+
+Temperature (Celsius): {{weather.tempc}}
+Temperature (Fahrenheit): {{weather.tempf}}
+Description: {{weather.summary}}
+Humidity: {{weather.humidity}}
+
+{% for hotel in hotels %} 
+<p>
+{{hotel.name}} <br/>
+Price: ${{hotel.price}} <br/>
+Rating: {{hotel.rating}} <br/>
+</p>
+{% endfor %}
+
+{% endblock %}
