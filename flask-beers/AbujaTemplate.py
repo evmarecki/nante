@@ -5,6 +5,7 @@
 {% endfor %}
 
 {% for data in AbujaWeather %} 
+
 Temperature (Celsius): {{data.tempC}}
 Temperature (Fahrenheit): {{data.tempF}}
 Description: {{data.summary}}
