@@ -50,17 +50,22 @@ h1,h2,h3,h4,h5,h6 {
 
   <div class="column">
     <h2>Weather</h2>
-    Temperature (Celsius): {{weather.tempc}} <br/>
-	Temperature (Fahrenheit): {{weather.tempf}}<br/>
-	Description: {{weather.summary}}<br/>
-	Humidity: {{weather.humidity}}<br/>  </div>
+	{% for w in weather %}
+	  <p>
+    Temperature (Celsius): {{w.tempc}} <br/>
+	Temperature (Fahrenheit): {{w.tempf}}<br/>
+	Description: {{w.summary}}<br/>
+	Humidity: {{w.humidity}}<br/>
+	  </p>
+	  {% endfor %}
+	</div>
 
   <div class="column">
     <h2>Hotels</h2>
     {% for hotel in hotels %} 
 	<p>
 	{{hotel.name}} <br/>
-	Price: ${{hotel.price}} <br/>
+	Price per night: ${{hotel.price}} <br/>
 	Rating: {{hotel.rating}}/10 <br/>
 	</p>
 	{% endfor %}
