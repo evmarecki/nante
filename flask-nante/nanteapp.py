@@ -16,7 +16,7 @@ def main():
 def City(city):
     CityMovies = db.session.query(modelsNew.Movies)\
         .filter(modelsNew.Movies.city == city).all()
-    w = db.session.query(modelsNew.Weather)\
+   CityWeather = db.session.query(modelsNew.Weather)\
         .filter(modelsNew.Weather.city == city).all()
     CityHotels = db.session.query(modelsNew.Hotel)\
         .filter(modelsNew.Hotel.city == city).all()
