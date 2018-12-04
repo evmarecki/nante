@@ -9,10 +9,10 @@ Genre: {{movie.genre}}<br/>
 </p>
 {% endfor %}
 
-Temperature (Celsius): {{wea.c}}
-Temperature (Fahrenheit): {{wea.f}}
-Description: {{wea.s}}
-Humidity: {{wea.h}}
+Temperature (Celsius): {{weather.tempc}}
+Temperature (Fahrenheit): {{weather.tempf}}
+Description: {{weather.summary}}
+Humidity: {{weather.humidity}}
 
 {% for hotel in hotels %} 
 <p>
