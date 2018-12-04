@@ -32,6 +32,13 @@ def City(city):
     CityRestaurants = db.session.query(modelsNew.Restaurant)        .filter(modelsNew.Restaurant.city == city).all()
     return render_template('city.html', movies=CityMovies, weather=CityWeather, hotels = CityHotels, restaurants = CityRestaurants)
 
+ @app.route('/city/<city>/Movie4')
+    def Movie4(city):
+    	CityMovies = db.session.query(modelsNew.Movies)\
+        .filter(modelsNew.Movies.city == city and modelsNew.Movies.rating >=4.0).all()
+
+    return render_template('movie.html', movies = CityMovies)
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
 
