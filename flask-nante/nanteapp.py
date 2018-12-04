@@ -22,7 +22,7 @@ def City(city):
         .filter(modelsNew.Hotel.city == city).all()
     CityRestaurants = db.session.query(modelsNew.Restaurant)\
         .filter(modelsNew.Restaurant.city == city).all()
-    return render_template('city.html', movies=CityMovies, weather=CityWeather, hotel = CityHotels, restaurants = CityRestaurants)
+    return render_template('city.html', movies=CityMovies, weather=CityWeather, hotels = CityHotels, restaurants = CityRestaurants)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
