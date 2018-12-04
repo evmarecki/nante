@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <title>NANTE</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
+
+  <!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">Nante: Your travel guide to West Africa</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#destinations" class="w3-bar-item w3-button">Destinations</a>
+
+      <div class="w3-dropdown-hover">
+        <button class="w3-button">Ghana</button>
+        <div class="w3-dropdown-content w3-bar-block w3-border">
+          <a href="{{url_for('City', city = 'Accra')}}" class="w3-bar-item w3-button">Accra</a>
+     
+        </div>
+      </div> 
+
+       <div class="w3-dropdown-hover">
+        <button class="w3-button">Nigeria</button>
+        <div class="w3-dropdown-content w3-bar-block w3-border">
+          <a href="{{url_for('City', city = 'Abuja')}}" class="w3-bar-item w3-button">Abuja</a>
+           <a href="{{url_for('City', city = 'Ikeja')}}" class="w3-bar-item w3-button">Ikeja</a>
+          <a href="{{url_for('City', city = 'Lagos')}}" class="w3-bar-item w3-button">Lagos</a>
+          <a href="{{url_for('City', city = 'Uyo')}}" class="w3-bar-item w3-button">Uyo</a>
+        </div>
+      </div> 
+
+    </div>
+  </div>
+</div>
+
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
+
+</header>
+
+
+  <h2 id="heading">{% block heading %}{% endblock %}</h2>
+  {% block content %}{% endblock %}
+</html>

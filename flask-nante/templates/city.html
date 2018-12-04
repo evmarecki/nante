@@ -1,4 +1,4 @@
-{% extends 'layout.html' %} 
+{% extends 'layout_nostyle.html' %} 
 {% block heading %}{{city}}{% endblock %} 
 {% block content %} 
 
@@ -7,7 +7,12 @@
 <style>
 * {box-sizing: border-box;}
 
-body {margin: 0;}
+body {font-family: "Times New Roman", Georgia, Serif, margin: 0;}
+
+h1,h2,h3,h4,h5,h6 {
+      font-family: "Playfair Display";
+      letter-spacing: 5px;
+  }
 
 /* Create three equal columns that floats next to each other */
 .column {
@@ -15,14 +20,12 @@ body {margin: 0;}
     width: 50%;
     padding: 15px;
 }
-
 /* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
-
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width:600px) {
     .column {
@@ -32,7 +35,6 @@ body {margin: 0;}
 </style>
 
 <body>
-
 <div class="row">
   <div class="column">
     <h2>Movies</h2>
@@ -48,19 +50,23 @@ body {margin: 0;}
 
   <div class="column">
     <h2>Weather</h2>
-    Temperature (Celsius): {{weather.tempc}} <br/>
-	Temperature (Fahrenheit): {{weather.tempf}}<br/>
-	Description: {{weather.summary}}<br/>
-	Humidity: {{weather.humidity}}<br/>  </div>
+	{% for w in weather %}
+	  <p>
+    Temperature (Celsius): {{w.tempc}} <br/>
+	Temperature (Fahrenheit): {{w.tempf}}<br/>
+	Description: {{w.summary}}<br/>
+	Humidity: {{w.humidity}}%<br/>
+	  </p>
+	  {% endfor %}
+	</div>
 
   <div class="column">
     <h2>Hotels</h2>
     {% for hotel in hotels %} 
-	  TESTING
 	<p>
 	{{hotel.name}} <br/>
-	Price: ${{hotel.price}} <br/>
-	Rating: {{hotel.rating}} <br/>
+	Price per night: ${{hotel.price}} <br/>
+	Rating: {{hotel.rating}}/10 <br/>
 	</p>
 	{% endfor %}
   </div>
@@ -78,39 +84,8 @@ body {margin: 0;}
 
 </div>
 
-</body>
+</body>      
 
-<!--
-{% for movie in movies %} 
-<p>
- {{movie.title}}: {{movie.time_and_day}} showing at {{movie.theater_name}}<br/>
-Duration: {{movie.length}} minutes <br/>
-Rating: {{movie.rating}}<br/>
-Genre: {{movie.genre}}<br/>
-</p>
-{% endfor %}
- 
-Temperature (Celsius): {{weather.tempc}} <br/>
-Temperature (Fahrenheit): {{weather.tempf}}<br/>
-Description: {{weather.summary}}<br/>
-Humidity: {{weather.humidity}}<br/>
-
-{% for hotel in hotels %} 
-<p>
-{{hotel.name}} <br/>
-Price: ${{hotel.price}} <br/>
-Rating: {{hotel.rating}} <br/>
-</p>
-{% endfor %}
-
-{% for restaurant in restaurant %} 
-<p>
-{{restaurant.name}}: {{restaurant.isopen}} <br/>
-Address: {{restaurant.address}} <br/>
-Rating: {{restaurant.rating}} <br/>
-</p>
-{% endfor %}
--->
 
 {% endblock %}
 
