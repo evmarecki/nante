@@ -16,13 +16,13 @@ def main():
 def City(city):
     CityMovies = db.session.query(modelsNew.Movies)\
         .filter(modelsNew.Movies.city == city).all()
-    CityWeather = db.session.query(modelsNew.Weather)\
+    w = db.session.query(modelsNew.Weather)\
         .filter(modelsNew.Weather.city == city).all()
     CityHotels = db.session.query(modelsNew.Hotel)\
         .filter(modelsNew.Hotel.city == city).all()
     CityRestaurants = db.session.query(modelsNew.Restaurant)\
         .filter(modelsNew.Restaurant.city == city).all()
-    return render_template('city.html', movies=CityMovies, weather=CityWeather, hotel = CityHotels, restaurants = CityRestaurants)
+    return render_template('city.html', movies=CityMovies, weather=w, hotel = CityHotels, restaurants = CityRestaurants)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
