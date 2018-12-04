@@ -33,7 +33,7 @@ def getWeather():
         tempC = kelvinToCelcius(temperature)
         tempF = kelvinToFahrenheit(temperature)
         humidity = json_data["main"]["humidity"]
-        cursor.execute("INSERT INTO WEATHER VALUES (%s, %s, %s, %s, %s)", (city, description, tempC, tempF, humidity))
+        cursor.execute("INSERT INTO WEATHER VALUES (%s, %s, %s, %s, %s)", (city, summary, tempc, tempf, humidity))
 
     connect.commit()
     cursor.close()
