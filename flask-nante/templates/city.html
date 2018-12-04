@@ -36,8 +36,8 @@ h1,h2,h3,h4,h5,h6 {
 
 <body>
 <div class="row">
-  <div class="column">
-    <h2>Movies</h2>
+  <div class="w3-col">
+    <h2 class="w3-panel w3-pale-blue">Movies</h2>
     {% for movie in movies %} 
 		<p>
 		<h3>{{movie.title}}: {{movie.time_and_day}} showing at {{movie.theater_name}}</h3><br/>
@@ -48,7 +48,7 @@ h1,h2,h3,h4,h5,h6 {
 	{% endfor %}
   </div>
 
-  <div class="column">
+  <div class="w3-col">
     <h2 class="w3-panel w3-pale-green">Weather</h2>
 	{% for w in weather %}
 	  <p>
@@ -60,7 +60,7 @@ h1,h2,h3,h4,h5,h6 {
 	  {% endfor %}
 	</div>
 
-  <div class="column">
+  <div class="w3-col">
     <h2 class="w3-panel w3-pale-blue">Hotels</h2>
     {% for hotel in hotels %} 
 	<p>
@@ -71,7 +71,7 @@ h1,h2,h3,h4,h5,h6 {
 	{% endfor %}
   </div>
 
-  <div class="column">
+  <div class="w3-col">
     <h2 class="w3-panel w3-pale-green">Restaurants</h2>
    {% for restaurant in restaurant %} 
 	<p>
