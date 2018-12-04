@@ -28,10 +28,10 @@ def getWeather():
         url = api_address + city[0]
         json_data = requests.get(url).json()
         #TO DO: output current time, date
-        description = json_data["weather"][0]["main"]
+        summary = json_data["weather"][0]["main"]
         temperature = json_data["main"]["temp"]
-        tempC = kelvinToCelcius(temperature)
-        tempF = kelvinToFahrenheit(temperature)
+        tempc = kelvinToCelcius(temperature)
+        tempf = kelvinToFahrenheit(temperature)
         humidity = json_data["main"]["humidity"]
         cursor.execute("INSERT INTO WEATHER VALUES (%s, %s, %s, %s, %s)", (city, summary, tempc, tempf, humidity))
         
