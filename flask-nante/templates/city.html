@@ -56,11 +56,10 @@ body {margin: 0;}
   <div class="column">
     <h2>Hotels</h2>
     {% for hotel in hotels %} 
-	  TESTING
 	<p>
 	{{hotel.name}} <br/>
 	Price: ${{hotel.price}} <br/>
-	Rating: {{hotel.rating}} <br/>
+	Rating: {{hotel.rating}}/10 <br/>
 	</p>
 	{% endfor %}
   </div>
