@@ -1,25 +1,86 @@
-{% extends 'layout.html' %} {% block heading %}{{city}}{% endblock %} {% block content %} 
+{% extends 'layout_nostyle.html' %} 
+{% block heading %}{{city}}{% endblock %} 
+{% block content %} 
 
-{% for movie in movies %} 
-<p>
-{{movie.title}}: {{movie.time_and_day}} showing at {{movie.theater_name}}<br/>
-Duration: {{movie.length}} minutes <br/>
-Rating: {{movie.rating}}<br/>
-Genre: {{movie.genre}}<br/>
-</p>
-{% endfor %}
+<!-- Page content -->
 
-Temperature (Celsius): {{weather.tempc}}
-Temperature (Fahrenheit): {{weather.tempf}}
-Description: {{weather.summary}}
-Humidity: {{weather.humidity}}
+<style>
+* {box-sizing: border-box;}
 
-{% for hotel in hotels %} 
-<p>
-{{hotel.name}} <br/>
-Price: ${{hotel.price}} <br/>
-Rating: {{hotel.rating}} <br/>
-</p>
-{% endfor %}
+body {font-family: "Times New Roman", Georgia, Serif; margin: 0;}
+
+h1,h2,h3,h4,h5,h6 {
+      font-family: "Playfair Display";
+      letter-spacing: 5px;
+  }
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 15px;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+    .column {
+        width: 100%;
+    }
+}
+</style>
+
+<body>
+<div class="row">
+  <div class="column">
+    <h2>Movies</h2>
+    {% for movie in movies %} 
+		<p>
+		{{movie.title}}: {{movie.time_and_day}} showing at {{movie.theater_name}}<br/>
+		Duration: {{movie.length}} minutes <br/>
+		Rating: {{movie.rating}}<br/>
+		Genre: {{movie.genre}}<br/>
+		</p>
+	{% endfor %}
+  </div>
+
+  <div class="column">
+    <h2>Weather</h2>
+    Temperature (Celsius): {{weather.tempc}} <br/>
+	Temperature (Fahrenheit): {{weather.tempf}}<br/>
+	Description: {{weather.summary}}<br/>
+	Humidity: {{weather.humidity}}<br/>  </div>
+
+  <div class="column">
+    <h2>Hotels</h2>
+    {% for hotel in hotels %} 
+	<p>
+	{{hotel.name}} <br/>
+	Price: ${{hotel.price}} <br/>
+	Rating: {{hotel.rating}}/10 <br/>
+	</p>
+	{% endfor %}
+  </div>
+
+  <div class="column">
+    <h2>Restaurants</h2>
+   {% for restaurant in restaurant %} 
+	<p>
+	{{restaurant.name}}: {{restaurant.isopen}} <br/>
+	Address: {{restaurant.address}} <br/>
+	Rating: {{restaurant.rating}} <br/>
+	</p>
+	{% endfor %}
+  </div>
+
+</div>
+
+</body>      
+
 
 {% endblock %}
+

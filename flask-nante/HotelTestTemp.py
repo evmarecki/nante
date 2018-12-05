@@ -1,4 +1,3 @@
-
 # coding: utf-8
 
 # In[6]:
@@ -94,6 +93,4 @@ def getHTML():
         conn.close()
 
     
-    
 getHTML()
-
