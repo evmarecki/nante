@@ -91,3 +91,17 @@ conn.commit()
 cur.close()
 conn.close()
 
+
+from bs4 import BeautifulSoup
+from requests import get
+from requests.exceptions import RequestException
+from contextlib import closing
+import psycopg2
+
+
+# def getHTML(url):
+
+
+##get html
+with closing(get("https://silverbirdcinemas.com/cinema/accra/", stream=True)) as webResponse: #https://silverbirdcinemas.com/cinema/accra/
+    html=webResponse.content
