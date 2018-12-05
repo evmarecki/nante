@@ -93,5 +93,4 @@ def getHTML():
         conn.close()
 
     
-    
 getHTML()
