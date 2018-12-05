@@ -1,0 +1,30 @@
+# coding: utf-8
+
+
+
+
+# In[33]:
+
+
+
+
+
+
+
+from bs4 import BeautifulSoup
+
+from requests import get
+
+from requests.exceptions import RequestException
+
+from contextlib import closing
+
+import psycopg2
+
+
+
+
+# def getHTML(url):
+
+
+
