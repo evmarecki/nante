@@ -253,3 +253,7 @@ conn.commit()
 cur.close()
 conn.close()
 
+##clear current table
+cur.execute("truncate Movies") #if error, try adding cascade https://stackoverflow.com/questions/15712239/psql-how-to-flush-database-content-without-dropping-table
+
+
