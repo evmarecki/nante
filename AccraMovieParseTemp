@@ -129,3 +129,10 @@ for m in htmlParsed.findAll("h4", { "class" : "entry-title" }):
     print("titles")
     print(m.get_text())
 
+print()
+##movie length
+for m in htmlParsed.findAll("div", { "class" : "entry-date" }):
+    print("lengths")
+    print(m.get_text())
+    MovieLengths.append(m.get_text())
+
