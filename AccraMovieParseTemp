@@ -105,3 +105,9 @@ import psycopg2
 ##get html
 with closing(get("https://silverbirdcinemas.com/cinema/accra/", stream=True)) as webResponse: #https://silverbirdcinemas.com/cinema/accra/
     html=webResponse.content
+
+MovieTitles=list()
+MovieTimes=list()
+MovieLengths=list()
+MovieRatings=list()
+MovieGenres=list()
