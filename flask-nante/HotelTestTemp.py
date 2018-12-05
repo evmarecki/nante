@@ -105,3 +105,21 @@ with closing(get("https://silverbirdcinemas.com/cinema/accra/", stream=True)) as
 
 ##declare lists 
 
+MovieTitles=list()
+MovieTimes=list()
+MovieLengths=list()
+MovieRatings=list()
+MovieGenres=list()
+
+
+##parse html
+htmlParsed = BeautifulSoup(html, 'html.parser') #https://realpython.com/python-web-scraping-practical-introduction/
+count=0
+
+
+#city
+city = 'Accra'
+
+
+
+
