@@ -135,4 +135,14 @@ for m in htmlParsed.findAll("div", { "class" : "entry-date" }):
     print("lengths")
     print(m.get_text())
     MovieLengths.append(m.get_text())
+    
+    print()
+##movie times
+for m in htmlParsed.findAll("p", { "class" : "cinema_page_showtime" }):
+    MovieTimes.append(m.get_text())
+    print("times")
+    print(m.get_text())
+    
+print()
+
 
