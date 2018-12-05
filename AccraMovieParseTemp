@@ -1,8 +1,6 @@
 # coding: utf-8
 
-
 # In[33]:
-
 
 from bs4 import BeautifulSoup
 
@@ -30,3 +28,37 @@ MovieTimes=list()
 MovieLengths=list()
 MovieRatings=list()
 MovieGenres=list()
+
+##parse html
+htmlParsed = BeautifulSoup(html, 'html.parser') #https://realpython.com/python-web-scraping-practical-introduction/
+count=0
+
+
+#city
+city = 'Accra'
+
+
+#theater name
+theater_name = 'Silver Bird Cinemas'
+
+
+##title
+for m in htmlParsed.findAll("h4", { "class" : "entry-title" }): 
+    MovieTitles.append(m.get_text())
+    print("titles")
+    print(m.get_text())
+
+
+print()
+##movie length
+for m in htmlParsed.findAll("div", { "class" : "entry-date" }):
+    print("lengths")
+    print(m.get_text())
+    MovieLengths.append(m.get_text())
+    
+print()
+##movie times
+for m in htmlParsed.findAll("p", { "class" : "cinema_page_showtime" }):
+    MovieTimes.append(m.get_text())
+    print("times")
+    print(m.get_text())
