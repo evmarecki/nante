@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 import models
 import forms
 
+# Create the application.
 app = Flask(__name__)
 app.secret_key = 's3cr3t'
 app.config.from_object('config')
@@ -45,3 +46,4 @@ def pluralize(number, singular='', plural='s'):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+    
