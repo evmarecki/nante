@@ -1,4 +1,5 @@
 from flask import Flask, render_template, redirect, url_for
+#import flask--- standard
 #Using templates allows us to set a basic layout for all the pages and mention which element will change.
 from flask_sqlalchemy import SQLAlchemy
 import models
