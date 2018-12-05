@@ -121,5 +121,40 @@ count=0
 city = 'Accra'
 
 
+#theater name
+theater_name = 'Silver Bird Cinemas'
+
+
+##title
+for m in htmlParsed.findAll("h4", { "class" : "entry-title" }): 
+    MovieTitles.append(m.get_text())
+    print("titles")
+    print(m.get_text())
+
+
+print()
+##movie length
+for m in htmlParsed.findAll("div", { "class" : "entry-date" }):
+    print("lengths")
+    print(m.get_text())
+    MovieLengths.append(m.get_text())
+    
+print()
+##movie times
+for m in htmlParsed.findAll("p", { "class" : "cinema_page_showtime" }):
+    MovieTimes.append(m.get_text())
+    print("times")
+    print(m.get_text())
+    
+print()
+##genre
+for m in htmlParsed.findAll("div", { "class" : "note" }):
+    MovieGenres.append(m.get_text())
+    print("genre")
+    print(m.get_text())
+
+
+print()
+
 
 
