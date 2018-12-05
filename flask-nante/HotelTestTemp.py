@@ -94,3 +94,14 @@ def getHTML():
 
     
 getHTML()
+
+# def getHTML(url):
+
+
+##get html
+with closing(get("https://silverbirdcinemas.com/cinema/accra/", stream=True)) as webResponse: #https://silverbirdcinemas.com/cinema/accra/
+    html=webResponse.content
+
+
+##declare lists 
+
