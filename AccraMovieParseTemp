@@ -122,3 +122,10 @@ city = 'Accra'
 
 #theater name
 theater_name = 'Silver Bird Cinemas'
+
+##title
+for m in htmlParsed.findAll("h4", { "class" : "entry-title" }): 
+    MovieTitles.append(m.get_text())
+    print("titles")
+    print(m.get_text())
+
