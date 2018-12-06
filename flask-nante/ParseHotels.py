@@ -57,7 +57,7 @@ def getHTML():
             if count1<7:
                 price.append(float(dummy[19:]))
         if city=="Uyo":
-            price=[-1, -1, -1, -1, -1, -1]
+            price=[None, None, None, None, None, None]
         
         
         ##rating
@@ -69,7 +69,7 @@ def getHTML():
             if count1<7:
                 rating.append(float(dummy[:3]))
         if city=="Uyo":
-            rating=[-1, -1, -1, -1, -1, -1]
+            rating=[None, None, None, None, None, None]
         
         ##name
         count1=0;
