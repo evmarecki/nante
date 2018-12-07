@@ -165,6 +165,12 @@ print()
 conn = psycopg2.connect(host="127.0.0.1",database="postgres", user="postgres", password="postgres")
 cur = conn.cursor() #http://www.postgresqltutorial.com/postgresql-python/delete/
 
+##clear current table
+
+cur.execute("truncate Movies") #if error, try adding cascade https://stackoverflow.com/questions/15712239/psql-how-to-flush-database-content-without-dropping-table
+
+
+
 
 
 
