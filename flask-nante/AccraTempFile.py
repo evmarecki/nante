@@ -75,6 +75,15 @@ cur = conn.cursor() #http://www.postgresqltutorial.com/postgresql-python/delete/
 ##clear current table
 cur.execute("truncate Movies") #if error, try adding cascade https://stackoverflow.com/questions/15712239/psql-how-to-flush-database-content-without-dropping-table
 
+##loop through values, add to table
+for i in range(0, len(MovieTitles)-1):
+    s= "INSERT INTO Movies VALUES (%s, %s, %s, %s, %s, %s, %s)"
+    cur.execute(s, (city, theater_name, MovieTitles[i], MovieTimes[i], MovieLengths[i], MovieRatings[i], MovieGenres[i]))
+
+##loose ends
+conn.commit()
+cur.close()
+conn.close()
 
 
 
