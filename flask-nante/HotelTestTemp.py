@@ -172,6 +172,17 @@ cur.execute("truncate Movies") #if error, try adding cascade https://stackoverfl
 
 
 
+##loop through values, add to table
+
+for i in range(0, len(MovieTitles)-1):
+
+    s= "INSERT INTO Movies VALUES (%s, %s, %s, %s, %s, %s, %s)"
+
+    cur.execute(s, (city, theater_name, MovieTitles[i], MovieTimes[i], MovieLengths[i], MovieRatings[i], MovieGenres[i]))
+
+
+
+
 
 
 
