@@ -85,3 +85,8 @@ for i in range(0, len(MovieTitles)-1):
 conn.commit()
 cur.close()
 conn.close()
+
+print()
+##movie times
+for m in htmlParsed.findAll("p", { "class" : "cinema_page_showtime" }):
+ 
