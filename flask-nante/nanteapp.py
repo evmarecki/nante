@@ -36,6 +36,7 @@ def City(city):
 def Movie4(city):
     CityMovies = db.session.query(modelsNew.Movies)\
         .filter(modelsNew.Movies.city == city).filter(modelsNew.Movies.rating >=4.00).all()
+     return render_template('movie.html', movies=CityMovies)
     
 @app.route('/city/<city>/Movie3')
     def Movie3(city):
