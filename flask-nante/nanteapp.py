@@ -7,7 +7,6 @@
 from flask import Flask, render_template, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 import modelsNew
-import forms
 import AllMoviesParse
 import ParseHotels
 import weather
@@ -31,13 +30,16 @@ def City(city):
     CityHotels = db.session.query(modelsNew.Hotel)        .filter(modelsNew.Hotel.city == city).all()
     CityRestaurants = db.session.query(modelsNew.Restaurant)        .filter(modelsNew.Restaurant.city == city).all()
     return render_template('city.html', movies=CityMovies, weather=CityWeather, hotels = CityHotels, restaurants = CityRestaurants)
-
-@app.route('/city/<city>/Movie4')
-def Movie4(city):
-    CityMovies = db.session.query(modelsNew.Movies)\
-        .filter(modelsNew.Movies.city == city).filter(modelsNew.Movies.rating >=4.00).all()
    
+@app.route('/city/<city>/movie/<rating>')
+def Movie(city, rating):
+    CityMovies = db.session.query(modelsNew.Movies)        .filter(modelsNew.Movies.city == city).filter(modelsNew.Movies.rating >=rating).all()
     return render_template('movie.html', movies=CityMovies)
+
+@app.route('/city/<city>/hotel/<price>')
+def Hotel(city, price):
+    CityHotels = db.session.query(modelsNew.Hotel)        .filter(modelsNew.Hotel.city == city).filter(modelsNew.Hotel.price <=price).all()
+    return render_template('hotel.html', hotels=CityHotels)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
