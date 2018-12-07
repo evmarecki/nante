@@ -179,6 +179,15 @@ for i in range(0, len(MovieTitles)-1):
     s= "INSERT INTO Movies VALUES (%s, %s, %s, %s, %s, %s, %s)"
 
     cur.execute(s, (city, theater_name, MovieTitles[i], MovieTimes[i], MovieLengths[i], MovieRatings[i], MovieGenres[i]))
+    
+
+##loose ends
+
+conn.commit()
+
+cur.close()
+
+conn.close()
 
 
 
