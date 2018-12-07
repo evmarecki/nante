@@ -7,7 +7,6 @@
 from flask import Flask, render_template, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 import modelsNew
-import forms
 import AllMoviesParse
 import ParseHotels
 import weather
