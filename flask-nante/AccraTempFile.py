@@ -89,4 +89,5 @@ conn.close()
 print()
 ##movie times
 for m in htmlParsed.findAll("p", { "class" : "cinema_page_showtime" }):
+      
  
