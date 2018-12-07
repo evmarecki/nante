@@ -33,7 +33,7 @@ def City(city):
     return render_template('city.html', movies=CityMovies, weather=CityWeather, hotels = CityHotels, restaurants = CityRestaurants)
    
 @app.route('/city/<city>/movie/<rating>')
-    def Movie(city, rating):
+def Movie(city, rating):
     CityMovies = db.session.query(modelsNew.Movies)        .filter(modelsNew.Movies.city == city).filter(modelsNew.Movies.rating >=rating).all()
    
     return render_template('movie.html', movies=CityMovies)
