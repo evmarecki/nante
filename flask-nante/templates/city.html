@@ -7,7 +7,7 @@
 <style>
 * {box-sizing: border-box;}
 
-body {font-family: "Times New Roman", Georgia, Serif; margin: 0;}
+body {font-family: "Times New Roman", Georgia, Serif;} /*maybe remove margin??*/
 
 h1,h2,h3,h4,h5,h6 {
       font-family: "Playfair Display";
@@ -42,10 +42,12 @@ h1,h2,h3,h4,h5,h6 {
 	  <h4><a href="{{url_for('Movie', city = 'Accra', rating = 3.00)}}">3+ stars movies for Accra TEST</a></h4>
     {% for movie in movies %} 
 		<p>
-		<h3>{{movie.title}}: {{movie.time_and_day}} showing at {{movie.theater_name}}</h3><br/>
-		Duration: {{movie.length}} minutes <br/>
-		Rating: {{movie.rating}}/5<br/>
-		Genre: {{movie.genre}}<br/>
+		<h3>{{movie.title}}</h3>
+		<b class ="w3-text-teal">When:</b> {{movie.time_and_day}}</br>
+		<b class ="w3-text-teal">Where:</b> {{movie.theater_name}}<br/>
+		<b class ="w3-text-teal">Duration:</b> {{movie.length}} minutes <br/>
+		<b class ="w3-text-teal">Rating:</b> {{movie.rating}}/5<br/>
+		<b class ="w3-text-teal">Genre:</b> {{movie.genre}}<br/>
 		</p>
 	{% endfor %}
   </div>
@@ -54,10 +56,10 @@ h1,h2,h3,h4,h5,h6 {
     <h2 class="w3-panel w3-pale-green">Weather</h2>
 	{% for w in weather %}
 	  <p>
-    Temperature (Celsius): {{w.tempc}} <br/>
-	Temperature (Fahrenheit): {{w.tempf}}<br/>
-	Description: {{w.summary}}<br/>
-	Humidity: {{w.humidity}}%<br/>
+    <b class ="w3-text-teal">Temperature (Celsius):</b> {{w.tempc}} <br/>
+	<b class ="w3-text-teal">Temperature (Fahrenheit):</b> {{w.tempf}}<br/>
+	<b class ="w3-text-teal">Description:</b> {{w.summary}}<br/>
+	<b class ="w3-text-teal">Humidity:</b> {{w.humidity}}%<br/>
 	  </p>
 	  {% endfor %}
 	</div>
@@ -67,8 +69,8 @@ h1,h2,h3,h4,h5,h6 {
     {% for hotel in hotels %} 
 	<p>
 	<h3>{{hotel.name}}</h3> <br/>
-	Price per night: ${{hotel.price}} <br/>
-	Rating: {{hotel.rating}}/10 <br/>
+	<b class ="w3-text-teal">Price per night:</b> ${{hotel.price}} <br/>
+	<b class ="w3-text-teal">Rating:</b> {{hotel.rating}}/10 <br/>
 	</p>
 	{% endfor %}
   </div>
@@ -77,9 +79,9 @@ h1,h2,h3,h4,h5,h6 {
     <h2 class="w3-panel w3-pale-green">Restaurants</h2>
    {% for restaurant in restaurant %} 
 	<p>
-	{{restaurant.name}}: {{restaurant.isopen}} <br/>
-	Address: {{restaurant.address}} <br/>
-	Rating: {{restaurant.rating}} <br/>
+	<b class ="w3-text-teal">{{restaurant.name}}:</b> {{restaurant.isopen}} <br/>
+	<b class ="w3-text-teal">Address:</b> {{restaurant.address}} <br/>
+	<b class ="w3-text-teal">Rating: {{restaurant.rating}}</b> <br/>
 	</p>
 	{% endfor %}
   </div>
