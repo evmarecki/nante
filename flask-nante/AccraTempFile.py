@@ -59,10 +59,9 @@ for m in htmlParsed.findAll("div", { "class" : "note" }):
     MovieGenres.append(m.get_text())
     print("genre")
     print(m.get_text())
-
+    
 print()
 
-##rating
 for m in htmlParsed.findAll("span", { "class" : "rate" }):
     MovieRatings.append(m.get_text())
     print("rating")
@@ -85,3 +84,21 @@ for i in range(0, len(MovieTitles)-1):
 conn.commit()
 cur.close()
 conn.close()
+
+print()
+##movie times
+
+for m in htmlParsed.findAll("p", { "class" : "cinema_page_showtime" }):
+     MovieTimes.append(m.get_text())
+    print("times")
+     print(m.get_text())
+##rating
+
+
+
+
+        
+   
+      
+ 
+
