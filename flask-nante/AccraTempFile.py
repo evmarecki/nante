@@ -60,12 +60,8 @@ for m in htmlParsed.findAll("div", { "class" : "note" }):
     print("genre")
     print(m.get_text())
 
-print()
-
-##rating
-for m in htmlParsed.findAll("span", { "class" : "rate" }):
-    MovieRatings.append(m.get_text())
-    print("rating")
-    print(m.get_text())
-print()
+        
+   
+      
+ 
 
