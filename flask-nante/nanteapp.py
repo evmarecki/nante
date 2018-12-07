@@ -37,6 +37,12 @@ def Movie(city, rating):
    
     return render_template('movie.html', movies=CityMovies)
 
+@app.route('/city/<city>/hotel/<rating>')
+def Hotel(city, rating):
+    CityHotel = db.session.query(modelsNew.Movies)        .filter(modelsNew.Movies.city == city).filter(modelsNew.Hotel.rating >=rating).all()
+   
+    return render_template('hotel.html', hotels=CityHotels)
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
 
