@@ -7,7 +7,7 @@
 <style>
 * {box-sizing: border-box;}
 
-body {font-family: "Times New Roman", Georgia, Serif; margin: 50px 35px;} /* hopefully fixed padding */
+body {font-family: "Times New Roman", Georgia, Serif;} /* hopefully fixed padding */
 
 h1,h2,h3,h4,h5,h6 {
       font-family: "Playfair Display";
@@ -34,14 +34,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 </style>
 
-<body>
+<body style = "margin: 50px 35px;">
 <div class="row">
   <div class="w3-col">
     <h2 class="w3-panel w3-pale-blue">Movies</h2>
-
-	  <h4><a href="{{url_for('Movie', city = 'Accra', rating = 4.00)}}">4+ stars movies for Accra TEST</a></h4>
-	  <h4><a href="{{url_for('Movie', city = 'Accra', rating = 3.00)}}">3+ stars movies for Accra TEST</a></h4>
-    
+	  <h3><a href="{{url_for('Movie4', city = 'Accra')}}">4+ stars movies for Accra TEST</a></h3>
     {% for movie in movies %} 
 		<p>
 		<h3>{{movie.title}}</h3></br>
@@ -67,8 +64,6 @@ h1,h2,h3,h4,h5,h6 {
 	</div>
 
   <div class="w3-col">
-	  <h4><a href="{{url_for('Hotel', city = 'Accra', rating = 4.00)}}">4+ stars hotels for Accra TEST</a></h4>
-	  <h4><a href="{{url_for('Hotel', city = 'Accra', rating = 3.00)}}">3+ stars hotels for Accra TEST</a></h4>
     <h2 class="w3-panel w3-pale-blue">Hotels</h2>
     {% for hotel in hotels %} 
 	<p>
@@ -96,4 +91,3 @@ h1,h2,h3,h4,h5,h6 {
 
 
 {% endblock %}
-
