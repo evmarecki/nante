@@ -91,6 +91,7 @@ print()
 for m in htmlParsed.findAll("p", { "class" : "cinema_page_showtime" }):
      MovieTimes.append(m.get_text())
     print("times")
+     print(m.get_text())
    
       
  
