@@ -34,13 +34,16 @@ def City(city):
 @app.route('/city/<city>/movie/<rating>')
 def Movie(city, rating):
     CityMovies = db.session.query(modelsNew.Movies)        .filter(modelsNew.Movies.city == city).filter(modelsNew.Movies.rating >=rating).all()
-   
     return render_template('movie.html', movies=CityMovies)
 
 @app.route('/city/<city>/hotel/<rating>')
 def Hotel(city, rating):
     CityHotels = db.session.query(modelsNew.Hotel)        .filter(modelsNew.Hotel.city == city).filter(modelsNew.Hotel.rating >=rating).all()
-   
+    return render_template('hotel.html', hotels=CityHotels)
+
+@app.route('/city/<city>/hotel/<price>')
+def Hotel(city, rating):
+    CityHotels = db.session.query(modelsNew.Hotel)        .filter(modelsNew.Hotel.city == city).filter(modelsNew.Hotel.price >=price).all()
     return render_template('hotel.html', hotels=CityHotels)
 
 if __name__ == '__main__':
