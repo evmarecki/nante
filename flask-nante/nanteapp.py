@@ -43,7 +43,7 @@ def Hotel(city, price):
 
 @app.route('/city/<city>/restaurant/<rating>')
 def Hotel(city, rating):
-    CityRestaurants = db.session.query(modelsNew.Restaurant)        .filter(modelsNew.Restaurant.city == city).filter(modelsNew.Restaurant.rating > = rating).all()
+    CityRestaurants = db.session.query(modelsNew.Restaurant)        .filter(modelsNew.Restaurant.city == city).filter(modelsNew.Restaurant.rating >= rating).all()
     return render_template('restaurant.html', retaurants=CityRestaurants)
 
 
