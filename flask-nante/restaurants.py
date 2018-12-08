@@ -27,7 +27,7 @@ def rest():
     isopen=["12-9PM, Monday-Saturday", "12-2:30, 6:30-9:45 Monday-Saturday", "12-2:30, 7:30-11:30 Monday-Saturday","6:30-10, Tuesday-Saturday"]
         
     for i in range(0, len(names)):
-        s= "INSERT INTO Restaurant VALUES (%s, %s, %s, %s)"
+        s= "INSERT INTO Restaurant VALUES (%s,%s, %s, %s, %s)"
         cur.execute(s, ('Accra',names[i], address[i], ratings[i], isopen[i]))
      
         ##loose ends
@@ -39,7 +39,7 @@ def rest():
     ratings=[3.9, 3.8,3.9,3.7]
     isopen=["8AM-9PM Monday-Sunday", "7AM-10PM, Monday-Sunday", '10AM-11PM Monday-Sunday','11:30AM-11:30PM Monday-Sunday']
     for i in range(0, len(names)):
-        s= "INSERT INTO Restaurant VALUES (%s, %s, %s, %s)"
+        s= "INSERT INTO Restaurant VALUES (%s,%s, %s, %s, %s)"
         cur.execute(s, ('Uyo',names[i], address[i], ratings[i], isopen[i]))
      
         ##loose ends
@@ -51,7 +51,7 @@ def rest():
     ratings=[4.2,4.3,4.1,4.2]
     isopen=["11AM-11PM Monday-Sunday","8:30AM-12AM Monday-Sunday",'8AM-10PM Monday-Saturday','12-9PM Monday-Sunday']
     for i in range(0, len(names)):
-        s= "INSERT INTO Restaurant VALUES (%s, %s, %s, %s)"
+        s= "INSERT INTO Restaurant VALUES (%s,%s, %s, %s, %s)"
         cur.execute(s, ('Abuja',names[i], address[i], ratings[i], isopen[i]))
      
         ##loose ends
@@ -63,7 +63,7 @@ def rest():
     ratings=[4.3,4.4,4.4,4.1]
     isopen=["12PM-10 Tuesday-Sunday","10AM-10PM Tuesday-Sunday",'12-10:30PM Tuesday-Sunday','10:30AM-10PM Monday-Sunday']
     for i in range(0, len(names)):
-        s= "INSERT INTO Restaurant VALUES (%s, %s, %s, %s)"
+        s= "INSERT INTO Restaurant VALUES (%s,%s, %s, %s, %s)"
         cur.execute(s, ("Lagos",names[i], address[i], ratings[i], isopen[i]))
      
         ##loose ends
@@ -75,7 +75,7 @@ def rest():
     ratings=[4.3,4.2,3.4,4.1]
     isopen=['8AM-10PM Monday-Sunday','9AM-8 Monday-Sunday','10AM-4AM Monday-Sunday',"11AM-3AM Monday-Sunday"]
     for i in range(0, len(names)):
-        s= "INSERT INTO Restaurant VALUES (%s, %s, %s, %s)"
+        s= "INSERT INTO Restaurant VALUES (%s,%s, %s, %s, %s)"
         cur.execute(s, ("Ikeja",names[i], address[i], ratings[i], isopen[i]))
      
         ##loose ends
