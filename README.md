@@ -9,7 +9,7 @@ How to compile, set up, deploy, and use your system goes here
 * [SQLAlchemy](https://www.sqlalchemy.org/) - Python SQL Toolkit and ORM
 
 ## Contributers
-Refer to members.txt.
+Refer to [members.txt](https://github.com/evmarecki/nante/blob/master/members.txt).
 
 ## Code Structure
 * [nanteapp.py](https://github.com/evmarecki/nante/blob/master/flask-nante/nanteapp.py) - Main app to run to launch website.
