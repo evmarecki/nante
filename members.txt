@@ -1,4 +1,10 @@
 Ally
+-helped write and update schema
+-helped write and update table declarations
+-helped write and update SQL sample queries
+-wrote movie data scraper
+-wrote hotel data scraper
+-helped write restaurant data scraper
 
 Evie
 
