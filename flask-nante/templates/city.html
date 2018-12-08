@@ -37,7 +37,7 @@ h1,h2,h3,h4,h5,h6 {
 <div class="row" style = "padding: 50px 35px">
   <div class="w3-col">
     <h2 class="w3-panel w3-pale-blue">Movies</h2>
-	  <h3><a href="{{url_for('Movie', city = 'Accra', rating = 4.00)}}">4+/5 stars movies for Accra TEST</a></h3>
+	  <h3><a href="{{url_for('Movie', city = 'Accra', rating = 4.00)}}">4+/5 stars movies for Accra/a></h3>
     {% for movie in movies %} 
 		<p>
 		<h3>{{movie.title}}</h3></br>
@@ -64,7 +64,7 @@ h1,h2,h3,h4,h5,h6 {
 
   <div class="w3-col">
     <h2 class="w3-panel w3-pale-blue">Hotels</h2>
-	    <h3><a href="{{url_for('Hotel', city = 'Accra', price = 100)}}"> <$100 hotel for Accra TEST</a></h3>
+	    <h3><a href="{{url_for('Hotel', city = 'Accra', price = 100)}}"> <$100 hotel for Accra</a></h3>
     {% for hotel in hotels %} 
 	<p>
 	<h3>{{hotel.name}}</h3> <br/>
@@ -76,7 +76,7 @@ h1,h2,h3,h4,h5,h6 {
 
   <div class="w3-col">
     <h2 class="w3-panel w3-pale-green">Restaurants</h2>
-	  <h3><a href="{{url_for('Hotel', city = 'Accra', rating  = 4.00)}}"> 4+/5 star restaurants for Accra TEST</a></h3>
+	  <h3><a href="{{url_for('Hotel', city = 'Accra', rating  = 4.00)}}"> 4+/5 star restaurants for Accra </a></h3>
    {% for restaurant in restaurant %} 
 	<p>
 	<b class ="w3-text-teal">{{restaurant.name}}:</b> {{restaurant.hours}} <br/>
