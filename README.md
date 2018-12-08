@@ -12,3 +12,5 @@ How to compile, set up, deploy, and use your system goes here
 Refer to members.txt.
 
 ## Code Structure
+* [static](https://github.com/evmarecki/nante/tree/master/flask-nante/static) - Contains static files - images
+* [templates](https://github.com/evmarecki/nante/tree/master/flask-nante/templates) - Contains all html files
