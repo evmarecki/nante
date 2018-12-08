@@ -7,9 +7,9 @@
 from flask import Flask, render_template, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 import modelsNew
-import AllMoviesParse
+import ParseMovies
 import ParseHotels
-import weather
+import ParseWeather
 
 app = Flask(__name__)
 app.secret_key = 's3cr3t'
