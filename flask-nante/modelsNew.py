@@ -46,5 +46,5 @@ class Restaurant(db.Model):
     name = db.Column('name', db.String(256), primary_key = True)
     address = db.Column('address', db.String(256), primary_key = True)
     rating = db.Column('rating', db.Numeric(10,2)) 
-    isopen = db.Column('isopen', db.Boolean)
+    hours = db.Column('hours', db.String(256))
    
