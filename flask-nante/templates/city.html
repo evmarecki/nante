@@ -37,7 +37,7 @@ h1,h2,h3,h4,h5,h6 {
 <div class="row" style = "padding: 50px 35px">
   <div class="w3-col">
     <h2 class="w3-panel w3-pale-blue">Movies</h2>
-	  <h3><a href="{{url_for('Movie', city = 'Accra', rating = 4.00)}}">4+/5 stars movies for Accra/a></h3>
+	  <h3><a href="{{url_for('Movie', city = 'Accra', rating = 4.00)}}">4+/5 stars movies for Accra</a></h3>
     {% for movie in movies %} 
 		<p>
 		<h3>{{movie.title}}</h3></br>
