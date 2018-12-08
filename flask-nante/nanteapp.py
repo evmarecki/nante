@@ -18,8 +18,8 @@ db = SQLAlchemy(app, session_options={'autocommit': False})
 
 @app.route('/')
 def main():
-    weather.getWeather()
-    AllMoviesParse.getHTML()
+    ParseWeather.getWeather()
+    ParseMovies.getHTML()
     ParseHotels.getHTML()
     return render_template('homepage.html')
 
