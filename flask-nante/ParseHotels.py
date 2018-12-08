@@ -12,8 +12,8 @@ import psycopg2
 
 def getHTML():
     #declare cities, hotel urls
-    urls=["https://www.booking.com/city/gh/accra.html", "https://www.booking.com/city/ng/uyo.html","https://www.booking.com/city/ng/abuja.html", "https://www.booking.com/city/ng/lagos.html", "https://www.booking.com/city/ng/ikeja.html"]
-    cities=["Accra","Uyo","Abuja", "Lagos", "Ikeja"]
+    urls=["https://www.booking.com/city/gh/accra.html","https://www.booking.com/city/ng/abuja.html", "https://www.booking.com/city/ng/lagos.html", "https://www.booking.com/city/ng/ikeja.html"]
+    cities=["Accra","Abuja", "Lagos", "Ikeja"]
     
     ##clear old data
     conn = psycopg2.connect(host="127.0.0.1",database="postgres", user="postgres", password="postgres")
