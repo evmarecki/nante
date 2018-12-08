@@ -56,10 +56,7 @@ def getHTML():
             dummy=m.get_text().strip()
             if count1<7:
                 price.append(float(dummy[19:]))
-        if city=="Uyo":
-            price=[None, None, None, None, None, None]
-        
-        
+               
         ##rating
         count1=0;
         for m in htmlParsed.findAll("div", { "class" : "bui-card__text" }):
@@ -68,8 +65,6 @@ def getHTML():
             
             if count1<7:
                 rating.append(float(dummy[:3]))
-        if city=="Uyo":
-            rating=[None, None, None, None, None, None]
         
         ##name
         count1=0;
