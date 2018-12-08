@@ -11,7 +11,7 @@ from contextlib import closing
 import psycopg2
 
 def rest():
-    cities=["Accra", "Uyo", "Abuja","Lagos","Ikeja"]
+    cities=["Accra", "Abuja","Lagos","Ikeja"]
     
             ##connect to db
     conn = psycopg2.connect(host="127.0.0.1",database="postgres", user="postgres", password="postgres")
@@ -29,18 +29,6 @@ def rest():
     for i in range(0, len(names)):
         s= "INSERT INTO Restaurant VALUES (%s,%s, %s, %s, %s)"
         cur.execute(s, ('Accra',names[i], address[i], ratings[i], isopen[i]))
-     
-        ##loose ends
-    conn.commit()
-    
-    #Uyo
-    names=['Food Affairs','Kilimanjaro Fast Food','Chop Stop Restaurant','Silver Lounge Restaurant & Bar.']
-    address=['Udo Obio Street, Uyo, Akwa Ibom State, Nigeria', '165 Oron Rd, Uyo, Nigeria','Ewet Housing Estate, Uyo, Akwa Ibom State, Nigeria','Udo Udoma Ave, Uyo, Nigeria']
-    ratings=[3.9, 3.8,3.9,3.7]
-    isopen=["8AM-9PM Monday-Sunday", "7AM-10PM, Monday-Sunday", '10AM-11PM Monday-Sunday','11:30AM-11:30PM Monday-Sunday']
-    for i in range(0, len(names)):
-        s= "INSERT INTO Restaurant VALUES (%s,%s, %s, %s, %s)"
-        cur.execute(s, ('Uyo',names[i], address[i], ratings[i], isopen[i]))
      
         ##loose ends
     conn.commit()
