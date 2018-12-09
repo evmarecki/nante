@@ -2,7 +2,6 @@
 Brief intro goes here
 
 ## Getting Started
-How to compile, set up, deploy, and use your system goes here
 
 Setting up PostgreSQL: https://cloud.google.com/community/tutorials/setting-up-postgres 
 
@@ -28,3 +27,4 @@ python nanteapp.py
 
 
 ## Limitations on current implementation 
+The filters to narrow down data items by price and rating are only done for Accra, Ghana, rather than for all the cities. 
