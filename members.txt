@@ -33,4 +33,6 @@ Esther
 -helped with the updates for the table declarations
 -helped write the html template for our website
 -helped write the code for our homepage
--wrote and debugged ui and html/css for city
+-helped with debugged ui html for our cities files
+
+
