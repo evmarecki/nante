@@ -7,6 +7,11 @@ Ally
 -helped write restaurant data scraper
 
 Evie
+-helped write and update schema
+-created and helped update E/R Diagram
+-wrote weather data scraper
+-collaborated closely with Ally and Stephanie to make parsers and filtering functional
+-fixed app and git issues
 
 Sakura
 
