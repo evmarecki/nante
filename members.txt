@@ -29,3 +29,4 @@ Stephanie
 -wrote restaurant, hotel, and movie html files for filtering 
 
 Esther
+-helped write and update schema
