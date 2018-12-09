@@ -21,5 +21,11 @@ Sakura
 -wrote and debugged ui and html/css for city
 
 Stephanie
+-helped write and update schema
+-helped update table declarations
+-wrote the models according to the schema and table declarations
+-wrote the routes and (filtering) queries in the app
+-wrote the skeleton of the city.html file
+-wrote restaurant, hotel, and movie html files for filtering 
 
 Esther
