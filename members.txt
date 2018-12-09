@@ -8,6 +8,7 @@ Ally
 
 Evie
 -helped write and update schema
+-helped write and update SQL sample queries
 -created and helped update E/R Diagram
 -wrote weather data scraper
 -collaborated closely with Ally and Stephanie to make parsers and filtering functional
