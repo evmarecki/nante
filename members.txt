@@ -31,6 +31,7 @@ Stephanie
 Esther
 -helped write and update schema
 -helped with the updates for the table declarations
+
 -helped write the html template for our website
 -helped write the code for our homepage
 -helped with debugging the html for our citiy file
