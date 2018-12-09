@@ -5,7 +5,7 @@ Brief intro goes here
 How to compile, set up, deploy, and use your system goes here
 Setting up PostgreSQL: https://cloud.google.com/community/tutorials/setting-up-postgres 
 
-* [createTables.txt] (https://github.com/evmarecki/nante/blob/master/createTables.txt) - Code for creating tables in PostgreSQL
+[createTables.txt](https://github.com/evmarecki/nante/blob/master/createTables.txt) - Code for creating tables in PostgreSQL
 
 ## Built With
 * [Flask](http://flask.pocoo.org/) - The web framework used
