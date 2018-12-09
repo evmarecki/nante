@@ -31,3 +31,6 @@ Stephanie
 Esther
 -helped write and update schema
 -helped with the updates for the table declarations
+-helped write the html template for the website
+-helped write the  homepage
+-wrote and debugged ui and html/css for city
