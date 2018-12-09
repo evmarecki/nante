@@ -26,3 +26,5 @@ python nanteapp.py
 
 [More information on running Flask](https://sites.duke.edu/compsci316_01_f2018/help/flask/) 
 
+
+## Limitations on current implementation 
