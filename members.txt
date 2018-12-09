@@ -37,5 +37,3 @@ Esther
 -wrote test cases to debug our html code for the layout of our homepage, 
 taking into account our initial filters 
 
-
-
