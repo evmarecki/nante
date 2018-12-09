@@ -24,5 +24,5 @@ Refer to [members.txt](https://github.com/evmarecki/nante/blob/master/members.tx
 To run the website, in your Flask app directory on the VM, simply issue the following command:
 python nanteapp.py
 
-[More information on Flask](https://sites.duke.edu/compsci316_01_f2018/help/flask/) 
+[More information on running Flask](https://sites.duke.edu/compsci316_01_f2018/help/flask/) 
 
