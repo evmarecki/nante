@@ -34,5 +34,6 @@ Esther
 -helped write the html template for our website
 -helped write the code for our homepage
 -helped with debugged ui html for our cities files
+-wrote test cases to debug our html code for the layout of our homepage
 
 
