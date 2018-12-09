@@ -1,5 +1,3 @@
-Code for creating the tables
-
 CREATE TABLE Location (city VARCHAR(256) NOT NULL UNIQUE, country VARCHAR(256) NOT NULL, PRIMARY KEY(city,country));
 
 CREATE TABLE Movies (city VARCHAR(256) NOT NULL REFERENCES Location(city), Theater_name VARCHAR(256) NOT NULL, title VARCHAR(256) NOT NULL, Time_and_day VARCHAR(256) NOT NULL, length INT, rating DECIMAL(10,2), genre VARCHAR(256), PRIMARY KEY(title, time_and_day, city, Theater_name));
