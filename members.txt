@@ -30,3 +30,4 @@ Stephanie
 
 Esther
 -helped write and update schema
+-helped with the updates for the table declarations
