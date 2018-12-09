@@ -15,6 +15,10 @@ Evie
 -fixed app and git issues
 
 Sakura
+-researched and designed look and ux of website, and to display them properly formatted
+-wrote html template for website
+-wrote homepage
+-wrote and debugged ui and html/css for city
 
 Stephanie
 
