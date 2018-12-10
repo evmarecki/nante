@@ -1,5 +1,5 @@
 ## Nante
-Nante means journey in Akan (a major language spoken in Ghana). The word captures the the essence of our web-based application. The intention of Nante is to create a web application that will be a guide to West Africa, specifically Ghana and Nigeria for now. The application will take city and country (in West Africa) as inputs. It will output weather, languages, population data, various movies, and food options available in the area. The motivation behind this project is to have an application which tourists can use to plan their daily activities while in a major African city.
+Nante means journey in Akan (a major language spoken in Ghana). The word captures the the essence of our web-based application. The intention of Nante is to create a web application that will be a guide to West Africa, specifically Ghana and Nigeria for now. The application will take city and country (in West Africa) as inputs. It will output weather, languages, population data, various movies, and food options available in the area. The motivation behind this project is to have an application which tourists can use to plan their daily activities while in a major African city. We focused on West Africa because we believe that region is usually associated with poverty and not a region for tourists. We wanted to encourage a positve view of the region.
 
 
 
