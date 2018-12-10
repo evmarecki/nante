@@ -76,7 +76,7 @@ h1,h2,h3,h4,h5,h6 {
 
   <div class="w3-col">
     <h2 class="w3-panel w3-pale-green">Restaurants</h2>
-	  <h3><a href="{{url_for('Restaurant', city = 'Accra', rating  = 4.50)}}"> 4+/5 star restaurants for Accra </a></h3>
+	  <h3><a href="{{url_for('Restaurant', city = 'Accra', rating  = 4.50)}}"> 4.5+/5 star restaurants for Accra </a></h3>
    {% for restaurant in restaurants %} 
 	<p>
 	<b class ="w3-text-teal">{{restaurant.name}}:</b> {{restaurant.hours}} <br/>
