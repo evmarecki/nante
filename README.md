@@ -27,5 +27,4 @@ python nanteapp.py
 [More information on running Flask](https://sites.duke.edu/compsci316_01_f2018/help/flask/) 
 
 
-## Limitations on current implementation 
-The filters to narrow down data items by price and rating are only done for Accra, Ghana, rather than for all the cities. 
+
