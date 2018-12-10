@@ -80,16 +80,9 @@ def getHTML():
         conn = psycopg2.connect(host="127.0.0.1",database="postgres", user="postgres", password="postgres")
         cur = conn.cursor() #http://www.postgresqltutorial.com/postgresql-python/delete/
 
-        # print("dfkjlfksdjflksdjflkdsjlfkj")
-        # print(MovieLengths)
-        # print(MovieTitles)
-
         ##loop through values, add to table
         for i in range(0, len(MovieTitles)-1):
             s= "INSERT INTO Movies VALUES (%s, %s, %s, %s, %s, %s, %s)"
-            # print("------------------")
-            # print(MovieGenres[i])
-            # print(city, theater, MovieTitles[i], MovieTimes[i], MovieLengths[i], MovieRatings[i], MovieGenres[i])
             cur.execute(s, (city, theater, MovieTitles[i], MovieTimes[i], MovieLengths[i], MovieRatings[i], MovieGenres[i]))
 
         ##loose ends

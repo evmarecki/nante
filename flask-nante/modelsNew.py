@@ -5,8 +5,6 @@ class Location(db.Model):
     __tablename__ = 'location'
     city = db.Column('city', db.String(256), primary_key=True)
     country = db.Column('country', db.String(256))
-    population = db.Column('population', db.String(256))
-    fun_fact = db.Column('fun_fact', db.String(256))
 
 class Movies(db.Model):
     __tablename__ = 'movies'
